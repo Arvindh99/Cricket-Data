@@ -27,6 +27,13 @@ jobs:
       - name: Run download script
         run: python scripts/download.py
 
+      - name: Cleanup old zip files (keep latest)
+        run: |
+          cd data/zips
+          if ls *.zip 1> /dev/null 2>&1; then
+          ls -t *.zip | tail -n +2 | xargs -r rm --
+          fi
+
       - name: Commit and push if changes exist
         run: |
           git config user.name "github-actions"
