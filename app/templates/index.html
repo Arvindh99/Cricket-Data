@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Match Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-decor"></div>
+    <div class="container">
+        <header>
+            <h1>IPL Predictor</h1>
+            <p>Select match details to forecast the winner.</p>
+        </header>
+
+        <main>
+            <form id="prediction-form">
+                <div class="form-group row">
+                    <div class="col">
+                        <label for="team1">Team 1</label>
+                        <select id="team1" name="team1" required>
+                            <option value="" disabled selected>Select Team 1</option>
+                            {% for team in teams %}
+                            <option value="{{ team }}">{{ team }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="vs-badge">VS</div>
+                    <div class="col">
+                        <label for="team2">Team 2</label>
+                        <select id="team2" name="team2" required>
+                            <option value="" disabled selected>Select Team 2</option>
+                            {% for team in teams %}
+                            <option value="{{ team }}">{{ team }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="venue">Match Venue</label>
+                    <select id="venue" name="venue" required>
+                        <option value="" disabled selected>Select Playing Venue</option>
+                        {% for venue in venues %}
+                        <option value="{{ venue }}">{{ venue }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col">
+                        <label for="toss_winner">Toss Winner</label>
+                        <select id="toss_winner" name="toss_winner" required>
+                            <option value="" disabled selected>Who won the toss?</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="toss_decision">Toss Decision</label>
+                        <div class="toggle-group">
+                            <input type="radio" id="bat" name="toss_decision" value="bat" checked>
+                            <label for="bat">Bat First</label>
+                            
+                            <input type="radio" id="field" name="toss_decision" value="field">
+                            <label for="field">Field First</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" id="predict-btn">Predict Match Winner</button>
+            </form>
+
+            <div id="result-container" class="hidden">
+                <p>Predicted Winner</p>
+                <h2 id="winner-name">Unknown</h2>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
