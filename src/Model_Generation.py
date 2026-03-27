@@ -15,7 +15,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-data = pd.read_csv(os.path.join(BASE_DIR, 'ipl_matches.csv'))
+data = pd.read_csv(os.path.join(BASE_DIR, 'data', 'csv', 'ipl_matches.csv'))
 
 data.head()
 
