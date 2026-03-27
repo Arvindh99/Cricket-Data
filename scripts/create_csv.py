@@ -1,14 +1,20 @@
 import json
 import csv
 import os
+from datetime import datetime
 
 INPUT_DIR = "data/json"
 OUTPUT_DIR = "data/csv"
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "ipl_matches.csv")
+
+CURRENT_YEAR = str(datetime.now().year)
+
+CURRENT_FILE = os.path.join(OUTPUT_DIR, "ipl_current_season.csv")
+OTHER_FILE = os.path.join(OUTPUT_DIR, "ipl_matches.csv")
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-rows = []
+current_season_rows = []
+other_seasons_rows = []
 
 for file in os.listdir(INPUT_DIR):
     if file.endswith(".json"):
@@ -22,7 +28,7 @@ for file in os.listdir(INPUT_DIR):
 
         city = info.get("city", "NA")
         venue = info.get("venue", "NA")
-        season = info.get("season", "NA")
+        season = str(info.get("season", "NA"))
 
         toss_winner = info.get("toss", {}).get("winner", "NA")
         toss_decision = info.get("toss", {}).get("decision", "NA")
@@ -35,13 +41,30 @@ for file in os.listdir(INPUT_DIR):
         win_by_runs = outcome.get("by", {}).get("runs", 0)
         win_by_wickets = outcome.get("by", {}).get("wickets", 0)
 
-        rows.append([team1, team2, city, venue, season, toss_winner, toss_decision, winner, win_by_runs, win_by_wickets])
+        row = [
+            team1, team2, city, venue, season,
+            toss_winner, toss_decision, winner,
+            win_by_runs, win_by_wickets
+        ]
 
-header = ['team1', 'team2', 'city', 'venue', 'season', 'toss_winner', 'toss_decision', 'winner', 'win_by_runs', 'win_by_wickets']
+        if CURRENT_YEAR in season:
+            current_season_rows.append(row)
+        else:
+            other_seasons_rows.append(row)
 
-with open(OUTPUT_FILE, "w", newline="", encoding="utf-8") as f:
+header = ['team1', 'team2', 'city', 'venue', 'season','toss_winner', 'toss_decision', 'winner','win_by_runs', 'win_by_wickets']
+
+# Write current season CSV
+with open(CURRENT_FILE, "w", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
     writer.writerow(header)
-    writer.writerows(rows)
+    writer.writerows(current_season_rows)
 
-print(f"CSV created: {OUTPUT_FILE}")
+# Write other seasons CSV
+with open(OTHER_FILE, "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerow(header)
+    writer.writerows(other_seasons_rows)
+
+print(f"Current season CSV: {CURRENT_FILE}")
+print(f"Other seasons CSV: {OTHER_FILE}")
