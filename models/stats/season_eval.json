@@ -1,0 +1,46 @@
+{
+  "last_updated": "2026-03-31 12:12 UTC",
+  "total_matches": 3,
+  "correct": 1,
+  "incorrect": 2,
+  "skipped": 0,
+  "accuracy": 33.33,
+  "matches": [
+    {
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Royal Challengers Bengaluru",
+      "venue": "M Chinnaswamy Stadium, Bengaluru",
+      "toss_winner": "Royal Challengers Bengaluru",
+      "toss_decision": "field",
+      "predicted_winner": "Sunrisers Hyderabad",
+      "actual_winner": "Royal Challengers Bengaluru",
+      "team1_prob": 67.9,
+      "team2_prob": 21.0,
+      "correct": false
+    },
+    {
+      "team1": "Chennai Super Kings",
+      "team2": "Rajasthan Royals",
+      "venue": "Barsapara Cricket Stadium, Guwahati",
+      "toss_winner": "Rajasthan Royals",
+      "toss_decision": "field",
+      "predicted_winner": "Chennai Super Kings",
+      "actual_winner": "Rajasthan Royals",
+      "team1_prob": 83.6,
+      "team2_prob": 8.7,
+      "correct": false
+    },
+    {
+      "team1": "Kolkata Knight Riders",
+      "team2": "Mumbai Indians",
+      "venue": "Wankhede Stadium, Mumbai",
+      "toss_winner": "Mumbai Indians",
+      "toss_decision": "field",
+      "predicted_winner": "Mumbai Indians",
+      "actual_winner": "Mumbai Indians",
+      "team1_prob": 20.1,
+      "team2_prob": 69.8,
+      "correct": true
+    }
+  ]
+}
