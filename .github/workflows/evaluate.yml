@@ -1,6 +1,6 @@
 name: Evaluate IPL Season
 
-# Run daily at 1:00 AM UTC, and allow manual trigger
+# Run daily at 4:00 AM UTC, and allow manual trigger
 on:
   schedule:
     - cron: '0 4 * * *'
@@ -30,11 +30,12 @@ jobs:
     # Step 4: Run your script and log output to a single file
     - name: Run evaluate_season.py
       run: |
+        mkdir -p data
         python evaluate_season.py > data/evaluate.log 2>&1
 
     # Step 5: Upload the single log file as an artifact
     - name: Upload log
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: evaluate-log
         path: data/evaluate.log
