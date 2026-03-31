@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="background-decor"></div>
+
     <div class="container">
         <header>
             <h1>IPL Predictor</h1>
@@ -17,6 +18,7 @@
 
         <main>
             <form id="prediction-form">
+                <!-- Teams -->
                 <div class="form-group row">
                     <div class="col">
                         <label for="team1">Team 1</label>
@@ -27,7 +29,9 @@
                             {% endfor %}
                         </select>
                     </div>
+
                     <div class="vs-badge">VS</div>
+
                     <div class="col">
                         <label for="team2">Team 2</label>
                         <select id="team2" name="team2" required>
@@ -39,6 +43,7 @@
                     </div>
                 </div>
 
+                <!-- Venue -->
                 <div class="form-group">
                     <label for="venue">Match Venue</label>
                     <select id="venue" name="venue" required>
@@ -49,6 +54,7 @@
                     </select>
                 </div>
 
+                <!-- Toss -->
                 <div class="form-group row">
                     <div class="col">
                         <label for="toss_winner">Toss Winner</label>
@@ -56,12 +62,13 @@
                             <option value="" disabled selected>Who won the toss?</option>
                         </select>
                     </div>
+
                     <div class="col">
                         <label for="toss_decision">Toss Decision</label>
                         <div class="toggle-group">
                             <input type="radio" id="bat" name="toss_decision" value="bat" checked>
                             <label for="bat">Bat First</label>
-                            
+
                             <input type="radio" id="field" name="toss_decision" value="field">
                             <label for="field">Field First</label>
                         </div>
@@ -71,9 +78,28 @@
                 <button type="submit" id="predict-btn">Predict Match Winner</button>
             </form>
 
+            <!-- ✅ RESULT SECTION (FIXED) -->
             <div id="result-container" class="hidden">
-                <p>Predicted Winner</p>
+                <p class="result-label">Predicted Winner</p>
                 <h2 id="winner-name">Unknown</h2>
+
+                <div class="probability-box">
+                    <div class="team-prob">
+                        <span id="team1-name"></span>
+                        <span id="team1-prob"></span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="prob-bar-fill"></div>
+                    </div>
+
+                    <div class="team-prob">
+                        <span id="team2-name"></span>
+                        <span id="team2-prob"></span>
+                    </div>
+                </div>
+
+                <p id="confidence-text"></p>
             </div>
         </main>
     </div>
