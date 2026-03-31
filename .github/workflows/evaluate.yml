@@ -31,7 +31,7 @@ jobs:
     - name: Run evaluate_season.py
       run: |
         mkdir -p data
-        python evaluate_season.py > data/evaluate.log 2>&1
+        python evaluate_season.py 2>&1 | tee data/evaluate.log
 
     # Step 5: Upload the single log file as an artifact
     - name: Upload log
