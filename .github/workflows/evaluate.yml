@@ -1,20 +1,42 @@
-# evaluate.yml
+name: Evaluate Season
+
 on:
   schedule:
     - cron: '0 3 * * *'
   push:
     paths:
-      - 'data/csv/ipl_current_season.csv'  # also triggers on CSV update
+      - 'data/csv/ipl_current_season.csv'
+
+permissions:
+  contents: write   # ✅ REQUIRED for push
 
 jobs:
   evaluate:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - run: pip install -r requirements.txt
-      - run: python evaluate_season.py
-      - run: |
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run evaluation
+        run: python src/evaluate_season.py
+
+      - name: Commit & push results
+        run: |
           git config user.email "bot@github.com"
           git config user.name "GitHub Actions"
-          git add models/stats/season_eval.json
-          git commit -m "Update season eval results" && git push || echo "No changes"
+
+          git add models/stats/season_eval.json || true
+
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update season eval results"
+
+          git pull --rebase
+          git push
