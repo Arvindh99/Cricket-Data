@@ -3,6 +3,7 @@ name: Evaluate Season
 on:
   schedule:
     - cron: '0 3 * * *'
+  workflow_dispatch:
   push:
     paths:
       - 'data/csv/ipl_current_season.csv'
