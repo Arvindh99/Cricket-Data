@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-04-01 07:07 UTC",
-  "total_matches": 3,
-  "correct": 1,
+  "last_updated": "2026-04-01 07:19 UTC",
+  "total_matches": 4,
+  "correct": 2,
   "incorrect": 2,
   "skipped": 0,
-  "accuracy": 33.33,
+  "accuracy": 50.0,
   "matches": [
     {
       "team1": "Sunrisers Hyderabad",
@@ -40,6 +40,18 @@
       "actual_winner": "Mumbai Indians",
       "team1_prob": 20.1,
       "team2_prob": 69.8,
+      "correct": true
+    },
+    {
+      "team1": "Gujarat Titans",
+      "team2": "Punjab Kings",
+      "venue": "Maharaja Yadavindra Singh International Cricket Stadium, New Chandigarh",
+      "toss_winner": "Punjab Kings",
+      "toss_decision": "field",
+      "predicted_winner": "Punjab Kings",
+      "actual_winner": "Punjab Kings",
+      "team1_prob": 22.1,
+      "team2_prob": 59.7,
       "correct": true
     }
   ]
