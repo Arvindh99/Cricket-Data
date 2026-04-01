@@ -1,7 +1,8 @@
 services:
   - type: web
     name: cricket-predictor
-    env: python
-    pythonVersion: 3.11
+    runtime: python
+    pythonVersion: "3.11"
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: gunicorn app:app
+```
