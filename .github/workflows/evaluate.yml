@@ -1,41 +1,20 @@
-name: Evaluate IPL Season
-
-# Run daily at 4:00 AM UTC, and allow manual trigger
+# .github/workflows/evaluate.yml
 on:
   schedule:
-    - cron: '0 4 * * *'
-  workflow_dispatch:
+    - cron: '0 3 * * *'
+  push:
+    paths:
+      - 'data/csv/ipl_current_season.csv'  # also triggers on CSV update
 
 jobs:
-  evaluate-season:
+  evaluate:
     runs-on: ubuntu-latest
-
     steps:
-    # Step 1: Checkout the repo
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    # Step 2: Set up Python
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-
-    # Step 3: Install dependencies
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-    # Step 4: Run your script and log output to a single file
-    - name: Run src/evaluate_season.py
-      run: |
-        mkdir -p data
-        python evaluate_season.py 2>&1 | tee data/evaluate.log
-
-    # Step 5: Upload the single log file as an artifact
-    - name: Upload log
-      uses: actions/upload-artifact@v4
-      with:
-        name: evaluate-log
-        path: data/evaluate.log
+      - uses: actions/checkout@v3
+      - run: pip install -r requirements.txt
+      - run: python evaluate_season.py
+      - run: |
+          git config user.email "bot@github.com"
+          git config user.name "GitHub Actions"
+          git add models/stats/season_eval.json
+          git commit -m "Update season eval results" && git push || echo "No changes"
