@@ -1,4 +1,4 @@
-# .github/workflows/evaluate.yml
+# evaluate.yml
 on:
   schedule:
     - cron: '0 3 * * *'
