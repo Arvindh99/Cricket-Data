@@ -28,7 +28,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     # Step 4: Run your script and log output to a single file
-    - name: Run evaluate_season.py
+    - name: Run src/evaluate_season.py
       run: |
         mkdir -p data
         python evaluate_season.py 2>&1 | tee data/evaluate.log
