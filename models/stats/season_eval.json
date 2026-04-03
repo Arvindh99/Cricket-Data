@@ -1,11 +1,23 @@
 {
-  "last_updated": "2026-04-02 05:09 UTC",
-  "total_matches": 4,
-  "correct": 2,
-  "incorrect": 2,
+  "last_updated": "2026-04-03 05:12 UTC",
+  "total_matches": 6,
+  "correct": 3,
+  "incorrect": 3,
   "skipped": 0,
   "accuracy": 50.0,
   "matches": [
+    {
+      "team1": "Lucknow Super Giants",
+      "team2": "Delhi Capitals",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
+      "toss_winner": "Delhi Capitals",
+      "toss_decision": "field",
+      "predicted_winner": "Lucknow Super Giants",
+      "actual_winner": "Delhi Capitals",
+      "team1_prob": 58.7,
+      "team2_prob": 21.0,
+      "correct": false
+    },
     {
       "team1": "Sunrisers Hyderabad",
       "team2": "Royal Challengers Bengaluru",
@@ -40,6 +52,18 @@
       "actual_winner": "Mumbai Indians",
       "team1_prob": 20.1,
       "team2_prob": 69.8,
+      "correct": true
+    },
+    {
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Kolkata Knight Riders",
+      "venue": "Eden Gardens, Kolkata",
+      "toss_winner": "Kolkata Knight Riders",
+      "toss_decision": "field",
+      "predicted_winner": "Sunrisers Hyderabad",
+      "actual_winner": "Sunrisers Hyderabad",
+      "team1_prob": 81.6,
+      "team2_prob": 6.8,
       "correct": true
     },
     {
