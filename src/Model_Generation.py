@@ -26,26 +26,6 @@ for folder in ['models/model', 'models/preprocess', 'models/mappings', 'models/s
     os.makedirs(os.path.join(BASE_DIR, folder), exist_ok=True)
 
 
-HIGH_TOSS_IMPACT_VENUES = {
-    # UAE — most decisive toss effect in IPL history
-    'Dubai International Cricket Stadium',
-    'Sharjah Cricket Stadium',
-    'Zayed Cricket Stadium, Abu Dhabi',
-
-    # Coastal / high-dew Indian venues
-    'Wankhede Stadium',                    # Mumbai — strongest dew in IPL
-    'MA Chidambaram Stadium',              # Chennai — dew + turning pitch
-    'Eden Gardens',                        # Kolkata — dew + slow surface
-    'Rajiv Gandhi International Stadium',  # Hyderabad — consistently heavy dew
-    'M Chinnaswamy Stadium',               # Bangalore — elevation + dew combo
-    'Brabourne Stadium',                   # Mumbai — same coastal conditions
-    'Dr DY Patil Sports Academy',          # Navi Mumbai — coastal dew
-
-    # Significant dew in recent IPL seasons
-    'Narendra Modi Stadium',               # Ahmedabad — day-night dew factor
-    'Ekana Cricket Stadium',               # Lucknow — heavy dew reported
-}
-
 data = pd.read_csv(os.path.join(BASE_DIR, 'data', 'csv', 'ipl_matches.csv'))
 
 team_name_mapping = {
@@ -67,7 +47,8 @@ data = data[~data['winner'].isin(defunct_teams)]
 data = data.reset_index(drop=True)
 
 data = data.drop(columns=['city', 'season'], errors='ignore')
-
+swap_mask = data['team1'] > data['team2']
+data.loc[swap_mask, ['team1', 'team2']] = (data.loc[swap_mask, ['team2', 'team1']].values)
 
 venue_mapping = {
     'M.Chinnaswamy Stadium':                                                     'M Chinnaswamy Stadium',
@@ -111,6 +92,26 @@ data['team1_batting_first'] = (
     ((data['toss_winner'] == data['team1']) & (data['toss_decision'] == 0)) |
     ((data['toss_winner'] == data['team2']) & (data['toss_decision'] == 1))
 ).astype(int)
+
+HIGH_TOSS_IMPACT_VENUES = {
+    # UAE — most decisive toss effect in IPL history
+    'Dubai International Cricket Stadium',
+    'Sharjah Cricket Stadium',
+    'Zayed Cricket Stadium, Abu Dhabi',
+
+    # Coastal / high-dew Indian venues
+    'Wankhede Stadium',                    # Mumbai — strongest dew in IPL
+    'MA Chidambaram Stadium',              # Chennai — dew + turning pitch
+    'Eden Gardens',                        # Kolkata — dew + slow surface
+    'Rajiv Gandhi International Stadium',  # Hyderabad — consistently heavy dew
+    'M Chinnaswamy Stadium',               # Bangalore — elevation + dew combo
+    'Brabourne Stadium',                   # Mumbai — same coastal conditions
+    'Dr DY Patil Sports Academy',          # Navi Mumbai — coastal dew
+
+    # Significant dew in recent IPL seasons
+    'Narendra Modi Stadium',               # Ahmedabad — day-night dew factor
+    'Ekana Cricket Stadium',               # Lucknow — heavy dew reported
+}
 
 # Toss advantage only meaningful at high-dew venues — interaction term
 data['toss_matters']             = data['venue'].isin(HIGH_TOSS_IMPACT_VENUES).astype(int)
@@ -239,7 +240,7 @@ joblib.dump(latest_form, os.path.join(BASE_DIR, 'models', 'stats', 'current_seas
 print("  current_season_form.pkl saved.")
 
 
-team_categories = sorted(data['team1'].unique().tolist())
+team_categories = sorted(set(data['team1'].tolist() + data['team2'].tolist()))
 encode = {team: idx for idx, team in enumerate(team_categories)} 
 
 for col in ['team1', 'team2', 'toss_winner']:

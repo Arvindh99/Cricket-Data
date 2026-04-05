@@ -8,9 +8,6 @@ app = Flask(__name__)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# ─────────────────────────────────────────────
-# LOAD ALL ARTIFACTS
-# ─────────────────────────────────────────────
 try:
     print("Loading model and required encoders...")
 
@@ -41,9 +38,6 @@ except Exception as e:
     print("Error loading models:", e)
 
 
-# ─────────────────────────────────────────────
-# HELPER FUNCTIONS
-# ─────────────────────────────────────────────
 def get_h2h_win_rate(team1: str, team2: str) -> float:
     key = (team1, team2)
     if key in h2h_total.index and team1 in h2h_wins.columns:
@@ -76,9 +70,6 @@ def get_team_form(team: str) -> float:
     return float(team_win_rate.get(team, 0.5))
 
 
-# ─────────────────────────────────────────────
-# ROUTES
-# ─────────────────────────────────────────────
 @app.route('/')
 def home():
     try:
@@ -136,6 +127,8 @@ def predict():
         venue       = venue_mapping.get(venue, venue)
         if venue not in top_venues:
             venue = 'Other'
+        if team1 > team2:
+            team1, team2 = team2, team1
 
         toss_decision_encoded = 0 if toss_decision.lower() == 'bat' else 1
         toss_win_team1        = 1 if toss_winner == team1 else 0

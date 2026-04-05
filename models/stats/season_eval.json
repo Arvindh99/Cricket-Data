@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-04-05 05:19 UTC",
+  "last_updated": "2026-04-05 10:50 UTC",
   "total_matches": 6,
-  "correct": 3,
-  "incorrect": 3,
+  "correct": 4,
+  "incorrect": 2,
   "skipped": 0,
-  "accuracy": 50.0,
+  "accuracy": 66.67,
   "matches": [
     {
       "team1": "Lucknow Super Giants",
@@ -14,8 +14,8 @@
       "toss_decision": "field",
       "predicted_winner": "Lucknow Super Giants",
       "actual_winner": "Delhi Capitals",
-      "team1_prob": 58.7,
-      "team2_prob": 21.0,
+      "team1_prob": 19.4,
+      "team2_prob": 64.0,
       "correct": false
     },
     {
@@ -24,11 +24,11 @@
       "venue": "M Chinnaswamy Stadium, Bengaluru",
       "toss_winner": "Royal Challengers Bengaluru",
       "toss_decision": "field",
-      "predicted_winner": "Sunrisers Hyderabad",
+      "predicted_winner": "Royal Challengers Bengaluru",
       "actual_winner": "Royal Challengers Bengaluru",
-      "team1_prob": 67.9,
-      "team2_prob": 21.0,
-      "correct": false
+      "team1_prob": 43.8,
+      "team2_prob": 37.9,
+      "correct": true
     },
     {
       "team1": "Chennai Super Kings",
@@ -38,8 +38,8 @@
       "toss_decision": "field",
       "predicted_winner": "Chennai Super Kings",
       "actual_winner": "Rajasthan Royals",
-      "team1_prob": 83.6,
-      "team2_prob": 8.7,
+      "team1_prob": 87.4,
+      "team2_prob": 4.9,
       "correct": false
     },
     {
@@ -50,8 +50,8 @@
       "toss_decision": "field",
       "predicted_winner": "Mumbai Indians",
       "actual_winner": "Mumbai Indians",
-      "team1_prob": 20.1,
-      "team2_prob": 69.8,
+      "team1_prob": 27.0,
+      "team2_prob": 65.8,
       "correct": true
     },
     {
@@ -62,8 +62,8 @@
       "toss_decision": "field",
       "predicted_winner": "Sunrisers Hyderabad",
       "actual_winner": "Sunrisers Hyderabad",
-      "team1_prob": 81.6,
-      "team2_prob": 6.8,
+      "team1_prob": 36.9,
+      "team2_prob": 52.4,
       "correct": true
     },
     {
@@ -74,8 +74,8 @@
       "toss_decision": "field",
       "predicted_winner": "Punjab Kings",
       "actual_winner": "Punjab Kings",
-      "team1_prob": 22.1,
-      "team2_prob": 59.7,
+      "team1_prob": 27.1,
+      "team2_prob": 49.9,
       "correct": true
     }
   ]

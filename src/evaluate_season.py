@@ -1,3 +1,4 @@
+
 import os
 import json
 import joblib
@@ -5,8 +6,8 @@ import traceback
 import pandas as pd
 from datetime import datetime, timezone
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 CSV_PATH      = os.path.join(BASE_DIR, 'data',   'csv',       'ipl_current_season.csv')
 OUTPUT_PATH   = os.path.join(BASE_DIR, 'models', 'stats',     'season_eval.json')
 
@@ -30,7 +31,7 @@ def load_artifacts():
     arts['venue_total']         = joblib.load(os.path.join(BASE_DIR, 'models', 'stats',      'venue_total.pkl'))
     arts['current_season_form'] = joblib.load(os.path.join(BASE_DIR, 'models', 'stats',      'current_season_form.pkl'))
     arts['reverse_encode']      = {v: k for k, v in arts['encode'].items()}
-    print("  ✔ All artifacts loaded.")
+    print("  All artifacts loaded.")
     return arts
 
 def get_h2h_win_rate(team1, team2, h2h_wins, h2h_total):
@@ -94,6 +95,8 @@ def build_features(row, arts):
     venue       = venue_mapping.get(venue, venue)
     if venue not in top_venues:
         venue = 'Other'
+    if team1 > team2:
+        team1, team2 = team2, team1
 
     toss_decision_encoded = 0 if toss_decision == 'bat' else 1
     toss_win_team1        = 1 if toss_winner == team1 else 0
@@ -207,6 +210,19 @@ def evaluate():
             print(f"  ✘ Error on row {_}: {e}")
             traceback.print_exc()
             skipped += 1
+    for idx, row in completed.iterrows():
+        t1 = arts['team_name_mapping'].get(row['team1'], row['team1'])
+        t2 = arts['team_name_mapping'].get(row['team2'], row['team2'])
+        tw = arts['team_name_mapping'].get(row.get('toss_winner',''), row.get('toss_winner',''))
+        t1_enc = arts['encode'].get(t1, -1)
+        t2_enc = arts['encode'].get(t2, -1)
+        tw_enc = arts['encode'].get(tw, -1)
+        if -1 in (t1_enc, t2_enc, tw_enc):
+            print(f"\n  SKIPPED ROW {idx}:")
+            print(f"    team1='{row['team1']}' → '{t1}' → enc={t1_enc}")
+            print(f"    team2='{row['team2']}' → '{t2}' → enc={t2_enc}")
+            print(f"    toss_winner='{row.get('toss_winner','')}' → '{tw}' → enc={tw_enc}")
+            print(f"    Known teams: {sorted(arts['encode'].keys())}")
 
     total_predicted = len(results)
     accuracy        = round((correct / total_predicted * 100), 2) if total_predicted > 0 else 0.0
