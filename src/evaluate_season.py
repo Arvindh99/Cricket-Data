@@ -1,17 +1,3 @@
-"""
-evaluate_season.py
-──────────────────
-Batch-predict every completed match in ipl_current_season.csv,
-compare with actual winner, and write results to:
-    models/stats/season_eval.json
-
-Designed to be called by a scheduler (cron / APScheduler / GitHub Actions):
-    python evaluate_season.py
-
-Expected CSV columns (same schema as ipl_matches.csv):
-    team1, team2, venue, toss_winner, toss_decision, winner
-"""
-
 import os
 import json
 import joblib
@@ -20,20 +6,10 @@ import pandas as pd
 from datetime import datetime, timezone
 
 
-# ─────────────────────────────────────────────
-# PATHS
-# ─────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# If this script lives inside a sub-folder (e.g. scripts/), adjust:
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 CSV_PATH      = os.path.join(BASE_DIR, 'data',   'csv',       'ipl_current_season.csv')
 OUTPUT_PATH   = os.path.join(BASE_DIR, 'models', 'stats',     'season_eval.json')
 
-
-# ─────────────────────────────────────────────
-# LOAD ARTIFACTS
-# ─────────────────────────────────────────────
 def load_artifacts():
     print("Loading artifacts...")
     arts = {}
@@ -57,10 +33,6 @@ def load_artifacts():
     print("  ✔ All artifacts loaded.")
     return arts
 
-
-# ─────────────────────────────────────────────
-# FEATURE HELPERS  (identical logic to app.py)
-# ─────────────────────────────────────────────
 def get_h2h_win_rate(team1, team2, h2h_wins, h2h_total):
     key = (team1, team2)
     if key in h2h_total.index and team1 in h2h_wins.columns:
@@ -92,10 +64,6 @@ def get_team_form(team, current_season_form, team_win_rate):
         return float(current_season_form[team])
     return float(team_win_rate.get(team, 0.5))
 
-
-# ─────────────────────────────────────────────
-# BUILD ONE FEATURE ROW  (mirrors app.py predict)
-# ─────────────────────────────────────────────
 def build_features(row, arts):
     team1        = row['team1']
     team2        = row['team2']
@@ -176,10 +144,6 @@ def build_features(row, arts):
     input_df = pd.DataFrame([input_dict]).reindex(columns=feature_columns, fill_value=0)
     return input_df, t1_enc, t2_enc
 
-
-# ─────────────────────────────────────────────
-# MAIN EVALUATION LOOP
-# ─────────────────────────────────────────────
 def evaluate():
     if not os.path.exists(CSV_PATH):
         print(f"ERROR: {CSV_PATH} not found. Nothing to evaluate.")
