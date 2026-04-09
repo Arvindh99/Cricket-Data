@@ -1,7 +1,14 @@
 team1,team2,city,venue,season,toss_winner,toss_decision,winner,win_by_runs,win_by_wickets
-Gujarat Titans,Punjab Kings,New Chandigarh,"Maharaja Yadavindra Singh International Cricket Stadium, New Chandigarh",2026,Punjab Kings,field,Punjab Kings,0,3
 Sunrisers Hyderabad,Kolkata Knight Riders,Kolkata,"Eden Gardens, Kolkata",2026,Kolkata Knight Riders,field,Sunrisers Hyderabad,65,0
+Mumbai Indians,Delhi Capitals,Delhi,"Arun Jaitley Stadium, Delhi",2026,Delhi Capitals,field,Delhi Capitals,0,6
 Kolkata Knight Riders,Mumbai Indians,Mumbai,"Wankhede Stadium, Mumbai",2026,Mumbai Indians,field,Mumbai Indians,0,6
-Chennai Super Kings,Rajasthan Royals,Guwahati,"Barsapara Cricket Stadium, Guwahati",2026,Rajasthan Royals,field,Rajasthan Royals,0,8
-Sunrisers Hyderabad,Royal Challengers Bengaluru,Bengaluru,"M Chinnaswamy Stadium, Bengaluru",2026,Royal Challengers Bengaluru,field,Royal Challengers Bengaluru,0,6
+Sunrisers Hyderabad,Lucknow Super Giants,Hyderabad,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",2026,Lucknow Super Giants,field,Lucknow Super Giants,0,5
+Gujarat Titans,Delhi Capitals,Delhi,"Arun Jaitley Stadium, Delhi",2026,Delhi Capitals,field,Gujarat Titans,1,0
+Gujarat Titans,Punjab Kings,New Chandigarh,"Maharaja Yadavindra Singh International Cricket Stadium, New Chandigarh",2026,Punjab Kings,field,Punjab Kings,0,3
 Lucknow Super Giants,Delhi Capitals,Lucknow,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",2026,Delhi Capitals,field,Delhi Capitals,0,6
+Rajasthan Royals,Gujarat Titans,Ahmedabad,"Narendra Modi Stadium, Ahmedabad",2026,Rajasthan Royals,bat,Rajasthan Royals,6,0
+Sunrisers Hyderabad,Royal Challengers Bengaluru,Bengaluru,"M Chinnaswamy Stadium, Bengaluru",2026,Royal Challengers Bengaluru,field,Royal Challengers Bengaluru,0,6
+Rajasthan Royals,Mumbai Indians,Guwahati,"Barsapara Cricket Stadium, Guwahati",2026,Mumbai Indians,field,Rajasthan Royals,27,0
+Chennai Super Kings,Rajasthan Royals,Guwahati,"Barsapara Cricket Stadium, Guwahati",2026,Rajasthan Royals,field,Rajasthan Royals,0,8
+Royal Challengers Bengaluru,Chennai Super Kings,Bengaluru,"M Chinnaswamy Stadium, Bengaluru",2026,Chennai Super Kings,field,Royal Challengers Bengaluru,43,0
+Chennai Super Kings,Punjab Kings,Chennai,"MA Chidambaram Stadium, Chepauk, Chennai",2026,Punjab Kings,field,Punjab Kings,0,5
