@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-04-10 05:31 UTC",
-  "total_matches": 13,
-  "correct": 9,
+  "last_updated": "2026-04-11 05:02 UTC",
+  "total_matches": 14,
+  "correct": 10,
   "incorrect": 4,
   "skipped": 0,
-  "accuracy": 69.23,
+  "accuracy": 71.43,
   "matches": [
     {
       "team1": "Chennai Super Kings",
@@ -64,6 +64,18 @@
       "actual_winner": "Royal Challengers Bengaluru",
       "team1_prob": 43.8,
       "team2_prob": 37.9,
+      "correct": true
+    },
+    {
+      "team1": "Kolkata Knight Riders",
+      "team2": "Lucknow Super Giants",
+      "venue": "Eden Gardens, Kolkata",
+      "toss_winner": "Lucknow Super Giants",
+      "toss_decision": "field",
+      "predicted_winner": "Lucknow Super Giants",
+      "actual_winner": "Lucknow Super Giants",
+      "team1_prob": 32.7,
+      "team2_prob": 53.8,
       "correct": true
     },
     {
