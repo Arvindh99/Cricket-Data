@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-04-13 05:47 UTC",
-  "total_matches": 18,
-  "correct": 13,
-  "incorrect": 5,
+  "last_updated": "2026-04-14 05:30 UTC",
+  "total_matches": 20,
+  "correct": 14,
+  "incorrect": 6,
   "skipped": 0,
-  "accuracy": 72.22,
+  "accuracy": 70.0,
   "matches": [
     {
       "team1": "Chennai Super Kings",
@@ -199,6 +199,18 @@
       "correct": false
     },
     {
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Rajasthan Royals",
+      "venue": "Rajiv Gandhi International Stadium, Uppal, Hyderabad",
+      "toss_winner": "Rajasthan Royals",
+      "toss_decision": "field",
+      "predicted_winner": "Sunrisers Hyderabad",
+      "actual_winner": "Sunrisers Hyderabad",
+      "team1_prob": 7.9,
+      "team2_prob": 86.0,
+      "correct": true
+    },
+    {
       "team1": "Mumbai Indians",
       "team2": "Delhi Capitals",
       "venue": "Arun Jaitley Stadium, Delhi",
@@ -221,6 +233,18 @@
       "team1_prob": 36.9,
       "team2_prob": 52.4,
       "correct": true
+    },
+    {
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Mumbai Indians",
+      "venue": "Wankhede Stadium, Mumbai",
+      "toss_winner": "Mumbai Indians",
+      "toss_decision": "field",
+      "predicted_winner": "Mumbai Indians",
+      "actual_winner": "Royal Challengers Bengaluru",
+      "team1_prob": 70.4,
+      "team2_prob": 19.6,
+      "correct": false
     }
   ]
 }
