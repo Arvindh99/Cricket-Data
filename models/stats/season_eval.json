@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-04-17 05:34 UTC",
-  "total_matches": 21,
+  "last_updated": "2026-04-18 05:13 UTC",
+  "total_matches": 23,
   "correct": 15,
-  "incorrect": 6,
+  "incorrect": 8,
   "skipped": 0,
-  "accuracy": 71.43,
+  "accuracy": 65.22,
   "matches": [
     {
       "team1": "Chennai Super Kings",
@@ -89,6 +89,30 @@
       "team1_prob": 71.0,
       "team2_prob": 15.2,
       "correct": true
+    },
+    {
+      "team1": "Mumbai Indians",
+      "team2": "Punjab Kings",
+      "venue": "Wankhede Stadium, Mumbai",
+      "toss_winner": "Punjab Kings",
+      "toss_decision": "field",
+      "predicted_winner": "Mumbai Indians",
+      "actual_winner": "Punjab Kings",
+      "team1_prob": 75.6,
+      "team2_prob": 15.3,
+      "correct": false
+    },
+    {
+      "team1": "Lucknow Super Giants",
+      "team2": "Royal Challengers Bengaluru",
+      "venue": "M Chinnaswamy Stadium, Bengaluru",
+      "toss_winner": "Royal Challengers Bengaluru",
+      "toss_decision": "field",
+      "predicted_winner": "Lucknow Super Giants",
+      "actual_winner": "Royal Challengers Bengaluru",
+      "team1_prob": 88.8,
+      "team2_prob": 5.6,
+      "correct": false
     },
     {
       "team1": "Kolkata Knight Riders",
