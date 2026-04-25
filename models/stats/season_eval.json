@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-04-24 05:41 UTC",
-  "total_matches": 31,
+  "last_updated": "2026-04-25 05:19 UTC",
+  "total_matches": 32,
   "correct": 21,
-  "incorrect": 10,
+  "incorrect": 11,
   "skipped": 0,
-  "accuracy": 67.74,
+  "accuracy": 65.62,
   "matches": [
     {
       "team1": "Rajasthan Royals",
@@ -77,6 +77,18 @@
       "team1_prob": 75.0,
       "team2_prob": 17.1,
       "correct": true
+    },
+    {
+      "team1": "Chennai Super Kings",
+      "team2": "Mumbai Indians",
+      "venue": "Wankhede Stadium, Mumbai",
+      "toss_winner": "Mumbai Indians",
+      "toss_decision": "field",
+      "predicted_winner": "Mumbai Indians",
+      "actual_winner": "Chennai Super Kings",
+      "team1_prob": 8.1,
+      "team2_prob": 82.3,
+      "correct": false
     },
     {
       "team1": "Rajasthan Royals",
