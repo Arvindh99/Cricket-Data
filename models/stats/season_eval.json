@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-04-26 05:44 UTC",
-  "total_matches": 32,
-  "correct": 21,
-  "incorrect": 11,
+  "last_updated": "2026-04-27 06:07 UTC",
+  "total_matches": 36,
+  "correct": 24,
+  "incorrect": 12,
   "skipped": 0,
-  "accuracy": 65.62,
+  "accuracy": 66.67,
   "matches": [
     {
       "team1": "Rajasthan Royals",
@@ -19,6 +19,18 @@
       "correct": true
     },
     {
+      "team1": "Rajasthan Royals",
+      "team2": "Sunrisers Hyderabad",
+      "venue": "Sawai Mansingh Stadium, Jaipur",
+      "toss_winner": "Sunrisers Hyderabad",
+      "toss_decision": "field",
+      "predicted_winner": "Sunrisers Hyderabad",
+      "actual_winner": "Sunrisers Hyderabad",
+      "team1_prob": 38.0,
+      "team2_prob": 48.8,
+      "correct": true
+    },
+    {
       "team1": "Royal Challengers Bengaluru",
       "team2": "Delhi Capitals",
       "venue": "M Chinnaswamy Stadium, Bengaluru",
@@ -28,6 +40,18 @@
       "actual_winner": "Delhi Capitals",
       "team1_prob": 65.4,
       "team2_prob": 24.0,
+      "correct": true
+    },
+    {
+      "team1": "Delhi Capitals",
+      "team2": "Punjab Kings",
+      "venue": "Arun Jaitley Stadium, Delhi",
+      "toss_winner": "Delhi Capitals",
+      "toss_decision": "bat",
+      "predicted_winner": "Punjab Kings",
+      "actual_winner": "Punjab Kings",
+      "team1_prob": 44.2,
+      "team2_prob": 44.6,
       "correct": true
     },
     {
@@ -112,6 +136,30 @@
       "actual_winner": "Royal Challengers Bengaluru",
       "team1_prob": 43.8,
       "team2_prob": 37.9,
+      "correct": true
+    },
+    {
+      "team1": "Chennai Super Kings",
+      "team2": "Gujarat Titans",
+      "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+      "toss_winner": "Gujarat Titans",
+      "toss_decision": "field",
+      "predicted_winner": "Chennai Super Kings",
+      "actual_winner": "Gujarat Titans",
+      "team1_prob": 81.3,
+      "team2_prob": 8.9,
+      "correct": false
+    },
+    {
+      "team1": "Gujarat Titans",
+      "team2": "Royal Challengers Bengaluru",
+      "venue": "M Chinnaswamy Stadium, Bengaluru",
+      "toss_winner": "Royal Challengers Bengaluru",
+      "toss_decision": "field",
+      "predicted_winner": "Royal Challengers Bengaluru",
+      "actual_winner": "Royal Challengers Bengaluru",
+      "team1_prob": 4.6,
+      "team2_prob": 86.6,
       "correct": true
     },
     {
