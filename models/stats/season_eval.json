@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-04-28 06:11 UTC",
-  "total_matches": 36,
-  "correct": 24,
+  "last_updated": "2026-04-29 06:05 UTC",
+  "total_matches": 38,
+  "correct": 26,
   "incorrect": 12,
   "skipped": 0,
-  "accuracy": 66.67,
+  "accuracy": 68.42,
   "matches": [
     {
       "team1": "Rajasthan Royals",
@@ -271,6 +271,18 @@
       "correct": false
     },
     {
+      "team1": "Punjab Kings",
+      "team2": "Rajasthan Royals",
+      "venue": "Maharaja Yadavindra Singh International Cricket Stadium, New Chandigarh",
+      "toss_winner": "Rajasthan Royals",
+      "toss_decision": "field",
+      "predicted_winner": "Rajasthan Royals",
+      "actual_winner": "Rajasthan Royals",
+      "team1_prob": 16.2,
+      "team2_prob": 74.0,
+      "correct": true
+    },
+    {
       "team1": "Lucknow Super Giants",
       "team2": "Delhi Capitals",
       "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
@@ -292,6 +304,18 @@
       "actual_winner": "Punjab Kings",
       "team1_prob": 27.1,
       "team2_prob": 49.9,
+      "correct": true
+    },
+    {
+      "team1": "Delhi Capitals",
+      "team2": "Royal Challengers Bengaluru",
+      "venue": "Arun Jaitley Stadium, Delhi",
+      "toss_winner": "Royal Challengers Bengaluru",
+      "toss_decision": "field",
+      "predicted_winner": "Royal Challengers Bengaluru",
+      "actual_winner": "Royal Challengers Bengaluru",
+      "team1_prob": 21.2,
+      "team2_prob": 65.5,
       "correct": true
     },
     {
