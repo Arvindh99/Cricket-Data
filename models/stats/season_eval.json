@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-04-30 06:09 UTC",
-  "total_matches": 38,
+  "last_updated": "2026-05-01 06:19 UTC",
+  "total_matches": 40,
   "correct": 26,
-  "incorrect": 12,
+  "incorrect": 14,
   "skipped": 0,
-  "accuracy": 68.42,
+  "accuracy": 65.0,
   "matches": [
     {
       "team1": "Rajasthan Royals",
@@ -43,6 +43,18 @@
       "correct": true
     },
     {
+      "team1": "Mumbai Indians",
+      "team2": "Sunrisers Hyderabad",
+      "venue": "Wankhede Stadium, Mumbai",
+      "toss_winner": "Mumbai Indians",
+      "toss_decision": "bat",
+      "predicted_winner": "Mumbai Indians",
+      "actual_winner": "Sunrisers Hyderabad",
+      "team1_prob": 72.5,
+      "team2_prob": 16.6,
+      "correct": false
+    },
+    {
       "team1": "Delhi Capitals",
       "team2": "Punjab Kings",
       "venue": "Arun Jaitley Stadium, Delhi",
@@ -65,6 +77,18 @@
       "team1_prob": 15.7,
       "team2_prob": 78.0,
       "correct": true
+    },
+    {
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Gujarat Titans",
+      "venue": "Narendra Modi Stadium, Ahmedabad",
+      "toss_winner": "Gujarat Titans",
+      "toss_decision": "field",
+      "predicted_winner": "Royal Challengers Bengaluru",
+      "actual_winner": "Gujarat Titans",
+      "team1_prob": 13.2,
+      "team2_prob": 63.5,
+      "correct": false
     },
     {
       "team1": "Royal Challengers Bengaluru",
