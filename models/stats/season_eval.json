@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-03 06:09 UTC",
-  "total_matches": 41,
-  "correct": 27,
-  "incorrect": 14,
+  "last_updated": "2026-05-04 06:18 UTC",
+  "total_matches": 44,
+  "correct": 28,
+  "incorrect": 16,
   "skipped": 0,
-  "accuracy": 65.85,
+  "accuracy": 63.64,
   "matches": [
     {
       "team1": "Rajasthan Royals",
@@ -28,6 +28,18 @@
       "actual_winner": "Sunrisers Hyderabad",
       "team1_prob": 38.0,
       "team2_prob": 48.8,
+      "correct": true
+    },
+    {
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Kolkata Knight Riders",
+      "venue": "Rajiv Gandhi International Stadium, Uppal, Hyderabad",
+      "toss_winner": "Sunrisers Hyderabad",
+      "toss_decision": "bat",
+      "predicted_winner": "Kolkata Knight Riders",
+      "actual_winner": "Kolkata Knight Riders",
+      "team1_prob": 44.0,
+      "team2_prob": 41.8,
       "correct": true
     },
     {
@@ -151,6 +163,18 @@
       "correct": true
     },
     {
+      "team1": "Mumbai Indians",
+      "team2": "Chennai Super Kings",
+      "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+      "toss_winner": "Mumbai Indians",
+      "toss_decision": "bat",
+      "predicted_winner": "Mumbai Indians",
+      "actual_winner": "Chennai Super Kings",
+      "team1_prob": 38.4,
+      "team2_prob": 48.8,
+      "correct": false
+    },
+    {
       "team1": "Sunrisers Hyderabad",
       "team2": "Royal Challengers Bengaluru",
       "venue": "M Chinnaswamy Stadium, Bengaluru",
@@ -220,6 +244,18 @@
       "actual_winner": "Punjab Kings",
       "team1_prob": 75.6,
       "team2_prob": 15.3,
+      "correct": false
+    },
+    {
+      "team1": "Punjab Kings",
+      "team2": "Gujarat Titans",
+      "venue": "Narendra Modi Stadium, Ahmedabad",
+      "toss_winner": "Gujarat Titans",
+      "toss_decision": "field",
+      "predicted_winner": "Punjab Kings",
+      "actual_winner": "Gujarat Titans",
+      "team1_prob": 2.6,
+      "team2_prob": 88.2,
       "correct": false
     },
     {
