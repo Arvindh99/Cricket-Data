@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-06 06:10 UTC",
-  "total_matches": 45,
-  "correct": 28,
+  "last_updated": "2026-05-07 06:15 UTC",
+  "total_matches": 47,
+  "correct": 30,
   "incorrect": 17,
   "skipped": 0,
-  "accuracy": 62.22,
+  "accuracy": 63.83,
   "matches": [
     {
       "team1": "Rajasthan Royals",
@@ -379,6 +379,18 @@
       "correct": false
     },
     {
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Punjab Kings",
+      "venue": "Rajiv Gandhi International Stadium, Uppal, Hyderabad",
+      "toss_winner": "Punjab Kings",
+      "toss_decision": "field",
+      "predicted_winner": "Sunrisers Hyderabad",
+      "actual_winner": "Sunrisers Hyderabad",
+      "team1_prob": 11.4,
+      "team2_prob": 80.0,
+      "correct": true
+    },
+    {
       "team1": "Gujarat Titans",
       "team2": "Punjab Kings",
       "venue": "Maharaja Yadavindra Singh International Cricket Stadium, New Chandigarh",
@@ -472,6 +484,18 @@
       "actual_winner": "Mumbai Indians",
       "team1_prob": 27.0,
       "team2_prob": 65.8,
+      "correct": true
+    },
+    {
+      "team1": "Delhi Capitals",
+      "team2": "Chennai Super Kings",
+      "venue": "Arun Jaitley Stadium, Delhi",
+      "toss_winner": "Delhi Capitals",
+      "toss_decision": "bat",
+      "predicted_winner": "Chennai Super Kings",
+      "actual_winner": "Chennai Super Kings",
+      "team1_prob": 72.0,
+      "team2_prob": 15.1,
       "correct": true
     },
     {
