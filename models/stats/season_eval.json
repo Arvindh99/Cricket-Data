@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-07 06:15 UTC",
-  "total_matches": 47,
+  "last_updated": "2026-05-08 05:33 UTC",
+  "total_matches": 48,
   "correct": 30,
-  "incorrect": 17,
+  "incorrect": 18,
   "skipped": 0,
-  "accuracy": 63.83,
+  "accuracy": 62.5,
   "matches": [
     {
       "team1": "Rajasthan Royals",
@@ -113,6 +113,18 @@
       "team1_prob": 32.8,
       "team2_prob": 57.6,
       "correct": true
+    },
+    {
+      "team1": "Lucknow Super Giants",
+      "team2": "Royal Challengers Bengaluru",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
+      "toss_winner": "Royal Challengers Bengaluru",
+      "toss_decision": "field",
+      "predicted_winner": "Royal Challengers Bengaluru",
+      "actual_winner": "Lucknow Super Giants",
+      "team1_prob": 1.0,
+      "team2_prob": 88.4,
+      "correct": false
     },
     {
       "team1": "Chennai Super Kings",
