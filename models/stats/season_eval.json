@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-13 06:30 UTC",
-  "total_matches": 54,
+  "last_updated": "2026-05-14 06:29 UTC",
+  "total_matches": 55,
   "correct": 33,
-  "incorrect": 21,
+  "incorrect": 22,
   "skipped": 0,
-  "accuracy": 61.11,
+  "accuracy": 60.0,
   "matches": [
     {
       "team1": "Rajasthan Royals",
@@ -232,6 +232,18 @@
       "actual_winner": "Gujarat Titans",
       "team1_prob": 25.5,
       "team2_prob": 54.3,
+      "correct": false
+    },
+    {
+      "team1": "Kolkata Knight Riders",
+      "team2": "Royal Challengers Bengaluru",
+      "venue": "Shaheed Veer Narayan Singh International Stadium, Raipur",
+      "toss_winner": "Royal Challengers Bengaluru",
+      "toss_decision": "field",
+      "predicted_winner": "Kolkata Knight Riders",
+      "actual_winner": "Royal Challengers Bengaluru",
+      "team1_prob": 44.0,
+      "team2_prob": 43.2,
       "correct": false
     },
     {
