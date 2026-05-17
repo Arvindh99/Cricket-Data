@@ -129,44 +129,6 @@ data['team1_context_win_prob'] = data.apply(lambda r: get_context_win_rate(r, 't
 
 data = data.drop(columns=['match_context'])
 
-current_season_path = os.path.join(BASE_DIR, 'data', 'csv', 'ipl_current_season.csv')
-
-if os.path.exists(current_season_path):
-    print("\nLoading current season data for team form...")
-    curr = pd.read_csv(current_season_path)
-
-    for col in ['team1', 'team2', 'winner']:
-        if col in curr.columns:
-            curr[col] = curr[col].replace(team_name_mapping)
-
-    # Stack into one row per (date, team, won) so we can compute cumulative form
-    all_curr = pd.concat([curr[['team1', 'winner']].rename(columns={'team1': 'team'}),curr[['team2', 'winner']].rename(columns={'team2': 'team'})]).reset_index(drop=True)
-
-    all_curr['won'] = (all_curr['team'] == all_curr['winner']).astype(int)
-
-    # Expanding (cumulative) mean shifted by 1 so a match doesn't count itself
-    all_curr['curr_season_form'] = (all_curr.groupby('team')['won'].transform(lambda x: x.shift(1).expanding(min_periods=1).mean()).fillna(0.5))
-
-    # Latest form value per team — used both here and at inference time
-    latest_form = all_curr.groupby('team')['curr_season_form'].last().fillna(0.5)
-
-    # Map onto historical dataset (training rows get season-level signal)
-    data['team1_form'] = data['team1'].map(latest_form).fillna(data['team1'].map(team_win_rate).fillna(0.5))
-    data['team2_form'] = data['team2'].map(latest_form).fillna(data['team2'].map(team_win_rate).fillna(0.5))
-
-    for team, form in latest_form.sort_values(ascending=False).items():
-        print(f"    {team:<45} {form:.3f}")
-
-else:
-    print("\nWarning: ipl_current_season.csv not found — falling back to historical win rate for form.")
-    data['team1_form'] = data['team1'].map(team_win_rate).fillna(0.5)
-    data['team2_form'] = data['team2'].map(team_win_rate).fillna(0.5)
-    latest_form = team_win_rate.copy()
-
-joblib.dump(latest_form, os.path.join(BASE_DIR, 'models', 'stats', 'current_season_form.pkl'))
-print("  current_season_form.pkl saved.")
-
-
 team_categories = sorted(set(data['team1'].tolist() + data['team2'].tolist()))
 encode = {team: idx for idx, team in enumerate(team_categories)} 
 

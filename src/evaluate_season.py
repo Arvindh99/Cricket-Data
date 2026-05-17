@@ -29,7 +29,6 @@ def load_artifacts():
     arts['h2h_total'] = joblib.load(os.path.join(BASE_DIR, 'models', 'stats', 'h2h_total.pkl'))
     arts['venue_wins'] = joblib.load(os.path.join(BASE_DIR, 'models', 'stats', 'venue_wins.pkl'))
     arts['venue_total']  = joblib.load(os.path.join(BASE_DIR, 'models', 'stats', 'venue_total.pkl'))
-    arts['current_season_form'] = joblib.load(os.path.join(BASE_DIR, 'models', 'stats', 'current_season_form.pkl'))
     arts['reverse_encode']= {v: k for k, v in arts['encode'].items()}
     print("  All artifacts loaded.")
     return arts
@@ -86,7 +85,6 @@ def build_features(row, arts):
     h2h_total = arts['h2h_total']
     venue_wins = arts['venue_wins']
     venue_total = arts['venue_total']
-    current_season_form = arts['current_season_form']
 
     team1 = team_name_mapping.get(team1, team1)
     team2 = team_name_mapping.get(team2, team2)
@@ -118,13 +116,11 @@ def build_features(row, arts):
     team2_venue_win_rate = get_venue_win_rate(team2, venue, venue_wins, venue_total)
     ctx   = f"{team1}_{team2}_{venue}_{toss_winner}"
     team1_context_win_prob = get_context_win_prob(team1, ctx, context_wins, context_matches)
-    team1_form  = get_team_form(team1, current_season_form, team_win_rate)
-    team2_form  = get_team_form(team2, current_season_form, team_win_rate)
 
     input_dict = {'team1':  t1_enc, 'team2': t2_enc, 'toss_winner': tw_enc, 'toss_decision': toss_decision_encoded, 'venue': v_enc, 'toss_win_team1': toss_win_team1,
         'team1_batting_first': team1_batting_first, 'toss_matters':  toss_matters, 'effective_toss_advantage': effective_toss_advantage,
         'strength_diff': strength_diff, 'h2h_win_rate_team1': h2h_win_rate_team1, 'team1_venue_win_rate':  team1_venue_win_rate, 'team2_venue_win_rate': team2_venue_win_rate,
-        'team1_context_win_prob': team1_context_win_prob, 'team1_form':  team1_form, 'team2_form':   team2_form}
+        'team1_context_win_prob': team1_context_win_prob}
 
     input_df = pd.DataFrame([input_dict]).reindex(columns=feature_columns, fill_value=0)
     return input_df, t1_enc, t2_enc
