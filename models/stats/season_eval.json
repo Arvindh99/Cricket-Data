@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-20 06:53 UTC",
-  "total_matches": 55,
-  "correct": 31,
-  "incorrect": 24,
+  "last_updated": "2026-05-21 06:57 UTC",
+  "total_matches": 62,
+  "correct": 35,
+  "incorrect": 27,
   "skipped": 0,
-  "accuracy": 56.36,
+  "accuracy": 56.45,
   "matches": [
     {
       "team1": "Royal Challengers Bengaluru",
@@ -41,6 +41,18 @@
       "team1_prob": 17.8,
       "team2_prob": 24.1,
       "correct": false
+    },
+    {
+      "team1": "Chennai Super Kings",
+      "team2": "Lucknow Super Giants",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
+      "toss_winner": "Lucknow Super Giants",
+      "toss_decision": "field",
+      "predicted_winner": "Lucknow Super Giants",
+      "actual_winner": "Lucknow Super Giants",
+      "team1_prob": 9.4,
+      "team2_prob": 32.5,
+      "correct": true
     },
     {
       "team1": "Chennai Super Kings",
@@ -319,6 +331,18 @@
       "correct": true
     },
     {
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Punjab Kings",
+      "venue": "Himachal Pradesh Cricket Association Stadium, Dharamsala",
+      "toss_winner": "Punjab Kings",
+      "toss_decision": "field",
+      "predicted_winner": "Royal Challengers Bengaluru",
+      "actual_winner": "Royal Challengers Bengaluru",
+      "team1_prob": 19.4,
+      "team2_prob": 26.6,
+      "correct": true
+    },
+    {
       "team1": "Chennai Super Kings",
       "team2": "Mumbai Indians",
       "venue": "Wankhede Stadium, Mumbai",
@@ -415,6 +439,30 @@
       "correct": false
     },
     {
+      "team1": "Punjab Kings",
+      "team2": "Mumbai Indians",
+      "venue": "Himachal Pradesh Cricket Association Stadium, Dharamsala",
+      "toss_winner": "Mumbai Indians",
+      "toss_decision": "field",
+      "predicted_winner": "Punjab Kings",
+      "actual_winner": "Mumbai Indians",
+      "team1_prob": 18.6,
+      "team2_prob": 29.6,
+      "correct": false
+    },
+    {
+      "team1": "Chennai Super Kings",
+      "team2": "Sunrisers Hyderabad",
+      "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+      "toss_winner": "Chennai Super Kings",
+      "toss_decision": "bat",
+      "predicted_winner": "Chennai Super Kings",
+      "actual_winner": "Sunrisers Hyderabad",
+      "team1_prob": 40.8,
+      "team2_prob": 7.5,
+      "correct": false
+    },
+    {
       "team1": "Delhi Capitals",
       "team2": "Royal Challengers Bengaluru",
       "venue": "Arun Jaitley Stadium, Delhi",
@@ -461,6 +509,30 @@
       "team1_prob": 29.8,
       "team2_prob": 19.6,
       "correct": false
+    },
+    {
+      "team1": "Lucknow Super Giants",
+      "team2": "Rajasthan Royals",
+      "venue": "Sawai Mansingh Stadium, Jaipur",
+      "toss_winner": "Rajasthan Royals",
+      "toss_decision": "field",
+      "predicted_winner": "Rajasthan Royals",
+      "actual_winner": "Rajasthan Royals",
+      "team1_prob": 29.3,
+      "team2_prob": 29.8,
+      "correct": true
+    },
+    {
+      "team1": "Rajasthan Royals",
+      "team2": "Delhi Capitals",
+      "venue": "Arun Jaitley Stadium, Delhi",
+      "toss_winner": "Delhi Capitals",
+      "toss_decision": "field",
+      "predicted_winner": "Delhi Capitals",
+      "actual_winner": "Delhi Capitals",
+      "team1_prob": 38.3,
+      "team2_prob": 9.7,
+      "correct": true
     },
     {
       "team1": "Lucknow Super Giants",
@@ -520,6 +592,18 @@
       "actual_winner": "Royal Challengers Bengaluru",
       "team1_prob": 28.8,
       "team2_prob": 15.1,
+      "correct": false
+    },
+    {
+      "team1": "Kolkata Knight Riders",
+      "team2": "Gujarat Titans",
+      "venue": "Eden Gardens, Kolkata",
+      "toss_winner": "Gujarat Titans",
+      "toss_decision": "field",
+      "predicted_winner": "Gujarat Titans",
+      "actual_winner": "Kolkata Knight Riders",
+      "team1_prob": 56.2,
+      "team2_prob": 9.4,
       "correct": false
     },
     {
