@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-21 06:57 UTC",
-  "total_matches": 62,
+  "last_updated": "2026-05-22 06:54 UTC",
+  "total_matches": 64,
   "correct": 35,
-  "incorrect": 27,
+  "incorrect": 29,
   "skipped": 0,
-  "accuracy": 56.45,
+  "accuracy": 54.69,
   "matches": [
     {
       "team1": "Royal Challengers Bengaluru",
@@ -496,6 +496,30 @@
       "actual_winner": "Rajasthan Royals",
       "team1_prob": 49.8,
       "team2_prob": 18.1,
+      "correct": false
+    },
+    {
+      "team1": "Gujarat Titans",
+      "team2": "Chennai Super Kings",
+      "venue": "Narendra Modi Stadium, Ahmedabad",
+      "toss_winner": "Chennai Super Kings",
+      "toss_decision": "field",
+      "predicted_winner": "Chennai Super Kings",
+      "actual_winner": "Gujarat Titans",
+      "team1_prob": 22.3,
+      "team2_prob": 18.6,
+      "correct": false
+    },
+    {
+      "team1": "Mumbai Indians",
+      "team2": "Kolkata Knight Riders",
+      "venue": "Eden Gardens, Kolkata",
+      "toss_winner": "Kolkata Knight Riders",
+      "toss_decision": "field",
+      "predicted_winner": "Mumbai Indians",
+      "actual_winner": "Kolkata Knight Riders",
+      "team1_prob": 12.4,
+      "team2_prob": 16.0,
       "correct": false
     },
     {
