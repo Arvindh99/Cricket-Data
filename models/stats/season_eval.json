@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-26 06:52 UTC",
-  "total_matches": 64,
-  "correct": 35,
-  "incorrect": 29,
+  "last_updated": "2026-05-27 07:09 UTC",
+  "total_matches": 68,
+  "correct": 36,
+  "incorrect": 32,
   "skipped": 0,
-  "accuracy": 54.69,
+  "accuracy": 52.94,
   "matches": [
     {
       "team1": "Royal Challengers Bengaluru",
@@ -199,6 +199,18 @@
       "correct": false
     },
     {
+      "team1": "Lucknow Super Giants",
+      "team2": "Punjab Kings",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
+      "toss_winner": "Punjab Kings",
+      "toss_decision": "field",
+      "predicted_winner": "Punjab Kings",
+      "actual_winner": "Punjab Kings",
+      "team1_prob": 15.7,
+      "team2_prob": 36.7,
+      "correct": true
+    },
+    {
       "team1": "Punjab Kings",
       "team2": "Delhi Capitals",
       "venue": "Himachal Pradesh Cricket Association Stadium, Dharamsala",
@@ -220,6 +232,18 @@
       "actual_winner": "Royal Challengers Bengaluru",
       "team1_prob": 29.1,
       "team2_prob": 23.9,
+      "correct": false
+    },
+    {
+      "team1": "Rajasthan Royals",
+      "team2": "Mumbai Indians",
+      "venue": "Wankhede Stadium, Mumbai",
+      "toss_winner": "Mumbai Indians",
+      "toss_decision": "field",
+      "predicted_winner": "Mumbai Indians",
+      "actual_winner": "Rajasthan Royals",
+      "team1_prob": 29.9,
+      "team2_prob": 11.6,
       "correct": false
     },
     {
@@ -376,6 +400,18 @@
       "actual_winner": "Sunrisers Hyderabad",
       "team1_prob": 33.0,
       "team2_prob": 22.8,
+      "correct": false
+    },
+    {
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Royal Challengers Bengaluru",
+      "venue": "Rajiv Gandhi International Stadium, Uppal, Hyderabad",
+      "toss_winner": "Sunrisers Hyderabad",
+      "toss_decision": "bat",
+      "predicted_winner": "Royal Challengers Bengaluru",
+      "actual_winner": "Sunrisers Hyderabad",
+      "team1_prob": 21.8,
+      "team2_prob": 14.0,
       "correct": false
     },
     {
@@ -605,6 +641,18 @@
       "team1_prob": 8.1,
       "team2_prob": 36.4,
       "correct": true
+    },
+    {
+      "team1": "Delhi Capitals",
+      "team2": "Kolkata Knight Riders",
+      "venue": "Eden Gardens, Kolkata",
+      "toss_winner": "Kolkata Knight Riders",
+      "toss_decision": "field",
+      "predicted_winner": "Kolkata Knight Riders",
+      "actual_winner": "Delhi Capitals",
+      "team1_prob": 14.9,
+      "team2_prob": 21.1,
+      "correct": false
     },
     {
       "team1": "Royal Challengers Bengaluru",
