@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-29 06:59 UTC",
-  "total_matches": 68,
-  "correct": 36,
-  "incorrect": 32,
+  "last_updated": "2026-05-30 06:27 UTC",
+  "total_matches": 70,
+  "correct": 37,
+  "incorrect": 33,
   "skipped": 0,
-  "accuracy": 52.94,
+  "accuracy": 52.86,
   "matches": [
     {
       "team1": "Mumbai Indians",
@@ -259,6 +259,18 @@
       "correct": false
     },
     {
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Gujarat Titans",
+      "venue": "Himachal Pradesh Cricket Association Stadium, Dharamsala",
+      "toss_winner": "Gujarat Titans",
+      "toss_decision": "field",
+      "predicted_winner": "Royal Challengers Bengaluru",
+      "actual_winner": "Royal Challengers Bengaluru",
+      "team1_prob": 8.6,
+      "team2_prob": 39.1,
+      "correct": true
+    },
+    {
       "team1": "Kolkata Knight Riders",
       "team2": "Lucknow Super Giants",
       "venue": "Eden Gardens, Kolkata",
@@ -365,6 +377,18 @@
       "team1_prob": 10.7,
       "team2_prob": 33.3,
       "correct": true
+    },
+    {
+      "team1": "Rajasthan Royals",
+      "team2": "Sunrisers Hyderabad",
+      "venue": "Maharaja Yadavindra Singh International Cricket Stadium, New Chandigarh",
+      "toss_winner": "Sunrisers Hyderabad",
+      "toss_decision": "field",
+      "predicted_winner": "Sunrisers Hyderabad",
+      "actual_winner": "Rajasthan Royals",
+      "team1_prob": 17.9,
+      "team2_prob": 28.8,
+      "correct": false
     },
     {
       "team1": "Gujarat Titans",
