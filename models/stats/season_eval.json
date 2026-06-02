@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-01 08:40 UTC",
-  "total_matches": 70,
-  "correct": 37,
-  "incorrect": 33,
+  "last_updated": "2026-06-02 08:01 UTC",
+  "total_matches": 72,
+  "correct": 38,
+  "incorrect": 34,
   "skipped": 0,
-  "accuracy": 52.86,
+  "accuracy": 52.78,
   "matches": [
     {
       "team1": "Mumbai Indians",
@@ -41,6 +41,18 @@
       "team1_prob": 30.4,
       "team2_prob": 29.8,
       "correct": true
+    },
+    {
+      "team1": "Gujarat Titans",
+      "team2": "Royal Challengers Bengaluru",
+      "venue": "Narendra Modi Stadium, Ahmedabad",
+      "toss_winner": "Royal Challengers Bengaluru",
+      "toss_decision": "field",
+      "predicted_winner": "Gujarat Titans",
+      "actual_winner": "Royal Challengers Bengaluru",
+      "team1_prob": 52.5,
+      "team2_prob": 15.8,
+      "correct": false
     },
     {
       "team1": "Chennai Super Kings",
@@ -472,6 +484,18 @@
       "actual_winner": "Punjab Kings",
       "team1_prob": 17.6,
       "team2_prob": 34.7,
+      "correct": true
+    },
+    {
+      "team1": "Rajasthan Royals",
+      "team2": "Gujarat Titans",
+      "venue": "Maharaja Yadavindra Singh International Cricket Stadium, New Chandigarh",
+      "toss_winner": "Rajasthan Royals",
+      "toss_decision": "bat",
+      "predicted_winner": "Gujarat Titans",
+      "actual_winner": "Gujarat Titans",
+      "team1_prob": 45.7,
+      "team2_prob": 20.1,
       "correct": true
     },
     {
